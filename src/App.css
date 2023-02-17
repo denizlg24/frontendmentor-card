@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+.main-page-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+}
+
+.card-display-container {
+  background: url("./images/bg-main-desktop.png") no-repeat;
+  background-size: cover;
+  flex: 1;
+}
+
+.card-form-container {
+  flex: 2;
+  padding: 10rem;
+  padding-left: 0;
+}
+
+.form-container {
+  padding-left: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.actual-form input {
+  margin-top: 0.3rem;
+}
+.main-form {
+  height: 100%;
+  color: hsl(278, 68%, 11%);
+  width: 100%;
+  max-width: 500px;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.actual-form input[type="text"] {
+  border-radius: 12px;
+  height: 3rem;
+  width: 100%;
+  border: double 2px;
+  border-color: hsl(270, 3%, 87%);
+  background-color: #ffffff;
+  outline: none;
+  font-size: 20px;
+  padding: 1rem;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  color: hsl(278, 68%, 11%);
+}
+.actual-form input[type="text"]:focus {
+  border: double 2px transparent;
+  outline: none;
+  background-image: linear-gradient(#ffffff, #ffffff),
+    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+#ccMonth:focus {
+    border: double 2px transparent;
+    outline: none;
+    background-image: linear-gradient(#ffffff, #ffffff),
+      linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+#ccYear:focus {
+    border: double 2px transparent;
+    outline: none;
+    background-image: linear-gradient(#ffffff, #ffffff),
+      linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+#ccCVC:focus {
+    border: double 2px transparent;
+    outline: none;
+    background-image: linear-gradient(#ffffff, #ffffff),
+      linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+.actual-form input[type="text"]::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+.adition-info{
+    display: flex;
+}
+
+#ccMonth {
+  border-radius: 12px;
+  height: 3rem;
+  width: 45%;
+  border: double 2px;
+  border-color: hsl(270, 3%, 87%);
+  background-color: #ffffff;
+  outline: none;
+  font-size: 20px;
+  padding: 1rem;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  color: hsl(278, 68%, 11%);
+  margin-right: .5rem;
+}
+
+#ccYear{
+    border-radius: 12px;
+    height: 3rem;
+    width: 45%;
+    border: double 2px;
+    border-color: hsl(270, 3%, 87%);
+    background-color: #ffffff;
+    outline: none;
+    font-size: 20px;
+    padding: 1rem;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: hsl(278, 68%, 11%);
+}
+
+#ccCVC{
+    border-radius: 12px;
+    height: 3rem;
+    width: 100%;
+    border: double 2px;
+    border-color: hsl(270, 3%, 87%);
+    background-color: #ffffff;
+    outline: none;
+    font-size: 20px;
+    padding: 1rem;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: hsl(278, 68%, 11%);
+}
+
+#submit-btn{
+    width: 100%;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Space Grotesk";
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+    transition: all ease .15;
+    margin-top: .5rem;
+}
+#submit-btn:hover{
+    cursor: pointer;
+    transform: scale(1.015);
+}
+
+#label-info{
+    margin-bottom: .5rem;
+    color: hsl(0, 100%, 66%);
+}
+
+.cards-vfx {
+  position: absolute;
+  top: 0;
+  left: calc(100vw * 0.33);
+  transform: translateX(-50%);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.card-front {
+  margin-bottom: 1rem;
+  transform: translateX(-25%);
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+  position: relative;
+}
+
+.card-back {
+  margin-top: 2rem;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+  position: relative;
+}
+
+.card-front__cc {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+}
+
+.card-back__cc {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 3rem;
+  padding-top: 5.8rem;
+  padding-bottom: 6.5rem;
+  text-align: right;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-info-vfx {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+.card-info-text {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.card-info-text-sub {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width:1440px) {
+  .main-page-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(0, 0%, 100%);
+    display: block;
+  }
+  .card-display-container {
+    background: url("./images/bg-main-mobile.png") no-repeat;
+    background-size: cover;
+    height: calc(100vh * 0.333);
+  }
+
+  .card-form-container {
+    padding: 2rem;
+    padding-bottom: auto;
+  }
+
+  .form-container {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .cards-vfx {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+  }
+  .card-front {
+    margin-bottom: 1rem;
+    left: 50%;
+    transform: translateY(-25%) translateX(-50%);
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+    position: relative;
+  }
+  
+  .card-back {
+    margin-top: 2rem;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+    position: relative;
+  }
+}
