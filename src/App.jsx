@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import bgCardFront from './images/bg-card-front.png';
+import bgCardBack from './images/bg-card-back.png';
 function App() {
   const defaultCCInfo = {
     ccNum: "0000 0000 0000 0000",
@@ -440,7 +442,7 @@ function App() {
         <div className="card-holder">
           <div className="card-front">
             <img
-              src="../src/images/bg-card-front.png"
+              src={bgCardFront}
               alt="Credit Card Front"
             />
             <div className="card-front__cc">
@@ -474,7 +476,7 @@ function App() {
             </div>
           </div>
           <div className="card-back">
-            <img src="../src/images/bg-card-back.png" alt="Credit Card Back" />
+            <img src={bgCardBack} alt="Credit Card Back" />
             <div className="card-back__cc">
               <p>{userInput.ccCVCNum}</p>
             </div>
